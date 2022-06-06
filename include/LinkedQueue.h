@@ -7,7 +7,7 @@ class Queue : public List
 {
 public:
 	void EnQueue(Hangul *);
-	bool DeQueue(string &);
+	bool DeQueue(char *Data);
 	void PrintQueue();
 };
 #endif

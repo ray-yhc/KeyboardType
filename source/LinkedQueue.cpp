@@ -4,10 +4,10 @@ void Queue::EnQueue(Hangul *Data)
 {
 	pushback(Data);
 }
-// bool Queue::DeQueue(string &Data)
-// {
-// 	return popfront(Data);
-// }
+bool Queue::DeQueue(char *Data)
+{
+	return popfront(Data);
+}
 void Queue::PrintQueue()
 {
 	PrintList();

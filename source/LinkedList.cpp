@@ -49,21 +49,20 @@ void List::pushback(Hangul *New_Node)
 		temp->setNext(New_Node); // Last Node's Next Node is New Node
 	}
 }
-// bool List::popfront(Datatype &Data)
-// { // Delete Data fromt List at front
-// 	if (head == NULL)
-// 	{ // If List is empty
-// 		// cout << "Error : Empty" << endl;	// Print out Error Message
-// 		return false; // Return false;
-// 	}
-// 	Node *Delete_Node;			// Pointer for Deleted Node
-// 	Delete_Node = head;			// Deleted Node is First Node
-// 	head = head->getNextNode(); // Head change to Second Node
-// 	// Return Deleted Node's Data by reference
-// 	Data = Delete_Node->getData();
-// 	delete Delete_Node; // Delete Node
-// 	return true;		// Return Data
-// }
+bool List::popfront(char *Data)
+{ // Delete Data fromt List at front
+	if (head == NULL)
+	{ // If List is empty
+		// cout << "Error : Empty" << endl;	// Print out Error Message
+		return false; // Return false;
+	}
+	Hangul *Delete_Node = head; // Deleted Node is First Node
+	head = head->getNext();		// Head change to Second Node
+	// Return Deleted Node's Data by reference
+	strcpy(Data, Delete_Node->geteng());
+	delete Delete_Node; // Delete Node
+	return true;		// Return Data
+}
 // bool List::popback(Datatype &Data)
 // { // Delete Data fromt List at back
 // 	if (head == NULL)
@@ -157,6 +156,25 @@ void List::PrintList()
 		while (Print_Node != NULL)
 		{										// If Node is not NULL
 			printHangul(Print_Node->getuni());	// Print out Node's data
+			Print_Node = Print_Node->getNext(); // Move to Next Node
+		}
+		cout << endl;
+	}
+}
+
+void List::PrintEngs()
+{								 // Print List
+	if (head == NULL)			 // If List is empty
+		cout << "Empty" << endl; // Print out Error Message
+	else
+	{
+		Hangul *Print_Node = head;
+		char *temp;
+		cout << "engs : ";
+		while (Print_Node != NULL)
+		{ // If Node is not NULL
+			temp = Print_Node->geteng();
+			cout << temp << endl;
 			Print_Node = Print_Node->getNext(); // Move to Next Node
 		}
 		cout << endl;

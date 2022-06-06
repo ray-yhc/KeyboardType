@@ -13,10 +13,11 @@ public:
 	string getListName();
 	void pushfront(Hangul *_hangul); // Insert Data to List at front
 	void pushback(Hangul *_hangul);	 // Insert Data to List at back
-	bool popfront(string &Data);	 // Delete Data fromt List at front
-	bool popback(string &Data);		 // Delete Data fromt List at back
+	bool popfront(char *Data);		 // Delete Data fromt List at front
+	bool popback(char *Data);		 // Delete Data fromt List at back
 	int searchIndex(string searchString);
 	int indexToUnicode(int index);
 	void PrintList(); // Print List
+	void PrintEngs();
 };
 #endif

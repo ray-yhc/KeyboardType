@@ -10,8 +10,9 @@ protected:
     char output[3];
     int signal;
 
-    // cjiNode *left;
+    cjiNode *left;
     cjiNode *right;
+    int height;
 
 public:
     cjiNode(int _signal, const char *_input, const char *_output);
@@ -20,38 +21,45 @@ public:
     char *getinput();
     char *getoutput();
     int getsignal();
-    // cjiNode* getLeft();
+    cjiNode *getLeft();
     cjiNode *getRight();
-    // void setLeft(cjiNode *right);
+    void setLeft(cjiNode *right);
     void setRight(cjiNode *right);
 
+    int getHeight();
+    void setHeight(int);
+
     int cmpPriority(int _signal, const char *_input); // this의 priority가 높으면  양수, 낮으면 음수, 같으면 0
-    // int compare(const char c[3]);  //맞는 글자인지 검색
-    // char *geteng();                // eng 반환
-    // int getuni();                  // uni 반환
-    // Hangul *getNext();             //다음노드 반환
-    // void setNext(Hangul *_hangul); //다음노드 설정
+    int cmpPriority(cjiNode *p);                      // this의 priority가 높으면  양수, 낮으면 음수, 같으면 0
 };
 
 class CJITree
 {
 private:
-    cjiNode *head; // Pointer for First Node
+    cjiNode *root; // Pointer for First Node
 public:
-    CJITree();                         // Constructor
-    ~CJITree();                        // Destructor
-    void pushfront(cjiNode *New_Node); // Insert Data to List at front
-    void pushback(cjiNode *New_Node);  // Insert Data to List at back
+    CJITree();  // Constructor
+    ~CJITree(); // Destructor
+    // void pushfront(cjiNode *New_Node); // Insert Data to List at front
+    // void pushback(cjiNode *New_Node);  // Insert Data to List at back
     // bool popfront(string &Data);     // Delete Data fromt List at front
     // bool popback(string &Data);      // Delete Data fromt List at back
-    char *searchOutput(int _signal, const char *_input);
+    // char *searchOutput(int _signal, const char *_input);
     // int indexToUnicode(int index);
-    void PrintList(); // Print List
+    // void PrintList(); // Print List
+
+    cjiNode *Insertion(cjiNode *p, cjiNode *newNode);
+    void Insert(cjiNode *newNode);
+    cjiNode *SearchNum(cjiNode *p, int _signal, const char *_input);
+    char *Search(int _signal, const char *_input);
+    cjiNode *getRoot();
+    // void preOrder(Node*);
+    // void inOrder(Node*);
+    // void postOrder(Node*);
+    void printTree(cjiNode *, int count = 0);
 };
 
 #endif
-
-
 
 // class Node {
 // private:
@@ -70,7 +78,6 @@ public:
 // 	int getHeight();
 // 	void setHeight(int);
 // };
-
 
 // Node* Node::getLeft(void) {
 // 	return left;

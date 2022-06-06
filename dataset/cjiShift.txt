@@ -1,39 +1,49 @@
-﻿1,k,o
-1,i,O
-1,j,p
-1,u,P
-1,h,hl
-1,hk,ho
-1,n,nl
-1,nj,np
-1,m,ml
-1,*,j
-1,^,u
-2,k,i
-2,hl,hk
-2,n,b
-2,m,n
-2,l,k
-2,*,*
-3,b,nj
-3,*,h
-3,^,y
-0,d,a
-0,a,d
-4,r,z
-4,z,R
-4,R,r
-5,s,f
-5,f,s
-6,e,x
-6,x,E
-6,E,e
-7,q,v
-7,v,Q
-7,Q,q
-8,t,g
-8,g,T
-8,T,t
-9,w,c
-9,c,W
-9,W,w
+1 k o
+1 i O
+1 j p
+1 u P
+1 h hl
+1 hk ho
+1 n nl
+1 nj np
+1 m ml
+1 * j
+1 ^ u
+2 k i
+2 hl hk
+2 n b
+2 m n
+2 l k
+2 * *
+3 b nj
+3 * h
+3 ^ y
+0 d a
+0 a d
+4 r z
+4 z R
+4 R r
+5 s f
+5 f s
+6 e x
+6 x E
+6 E e
+7 q v
+7 v Q
+7 Q q
+8 t g
+8 g T
+8 T t
+9 w c
+9 c W
+9 W w
+1 _ l
+2 _ *
+3 _ m
+4 _ r
+5 _ s
+6 _ e
+7 _ q
+8 _ t
+9 _ w
+0 _ o

@@ -7,7 +7,7 @@ class Stack : public List
 {
 public:
 	void Push(Hangul *);
-	bool Pop(string &);
+	bool Pop(char *Data);
 	void PrintStack();
 };
 #endif

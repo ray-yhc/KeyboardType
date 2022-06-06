@@ -84,7 +84,6 @@ NumList::NumList()
 { // Constructor
     /************ Implement here ***************/
     this->head = NULL;
-    cout << "Linked List" << endl;
     /************ Implement here ***************/
 }
 NumList::~NumList()
@@ -191,7 +190,7 @@ void NumList::PrintList()
 }
 int NumList ::getHead()
 {
-    return this->head->getData();
+    return (head == NULL) ? -1 : this->head->getData();
 }
 
 //

@@ -2,12 +2,12 @@
 
 void Stack::Push(Hangul *Data)
 {
-	pushback(Data);
+	pushfront(Data);
 }
-// bool Stack::Pop(string &Data)
-// {
-// 	return popback(Data);
-// }
+bool Stack::Pop(char *Data)
+{
+	return popfront(Data);
+}
 void Stack::PrintStack()
 {
 	PrintList();
